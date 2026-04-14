@@ -6,6 +6,8 @@ let paused = false;
 
 let remainingBeforePause = 0;
 
+const timerScreen = document.getElementById('timerScreen');
+
 // Start and stop on Space key
 document.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
@@ -15,7 +17,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-document.addEventListener('touchstart', (event) => {
+timerScreen.addEventListener('touchstart', (event) => {
   event.preventDefault();
 
   toggleTimer();
