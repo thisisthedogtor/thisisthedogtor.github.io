@@ -11,21 +11,31 @@ document.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
     event.preventDefault();
 
-    if (!running && !paused && totalTime > 0) {
-      startCountdown();
-      return;
-    }
-
-    if (running) {
-      pauseCountdown();
-      return;
-    }
-
-    if (paused) {
-      resumeCountdown();
-    }
+    toggleTimer();
   }
 });
+
+document.addEventListener('touchstart', (event) => {
+  event.preventDefault();
+
+  toggleTimer();
+}, {passive: false});
+
+function toggleTimer() {
+  if (!running && !paused && totalTime > 0) {
+    startCountdown();
+    return;
+  }
+
+  if (running) {
+    pauseCountdown();
+    return;
+  }
+
+  if (paused) {
+    resumeCountdown();
+  }
+}
 
 function prepareTimer() {
   const hrs = parseInt(document.getElementById('hours').value) || 0;

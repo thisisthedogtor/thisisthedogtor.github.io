@@ -8,13 +8,23 @@ document.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
     event.preventDefault(); // stops page scrolling
 
-    if (running) {
-      stopStopwatch();
-    } else {
-      startStopwatch();
-    }
+    toggleTimer();
   }
 });
+
+document.addEventListener('touchstart', (event) => {
+  event.preventDefault();
+
+  toggleTimer();
+}, {passive: false});
+
+function toggleTimer() {
+  if (running) {
+    stopStopwatch();
+  } else {
+    startStopwatch();
+  }
+}
 
 function startStopwatch() {
   if (running) return;
