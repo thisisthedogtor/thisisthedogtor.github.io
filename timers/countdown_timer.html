@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Countdown Timer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+
+  <body>
+    <div id="setupScreen">
+      <h2>Set Timer</h2>
+
+      <label>Hours:</label>
+      <input type="number" id="hours" min="0" value="0"><br><br>
+
+      <label>Minutes:</label>
+      <input type="number" id="minutes" min="0" value="1"><br><br>
+      
+      <label>Seconds:</label>
+      <input type="number" id="seconds" min="0" max="59" value="0"><br><br>
+      
+      <button onclick="prepareTimer()">Start</button>
+    </div>
+
+    <div id="timerScreen">
+      <div id="display">
+        <div class="digit">0</div>
+        <div class="digit">0</div>
+        <div class="separator">:</div>
+        <div class="digit">0</div>
+        <div class="digit">0</div>
+        <div class="separator">:</div>
+        <div class="digit">0</div>
+        <div class="digit">0</div>
+      </div>
+    </div>
+
+    <script src="./assets/js/countdown.js"></script>
+
+  </body>
+</html>

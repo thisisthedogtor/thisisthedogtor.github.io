@@ -1,0 +1,95 @@
+/* General page styling */
+body {
+  margin: 0;
+  background-color: #232323;
+  color: #ff2a2a;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#setupScreen {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  gap: 20px;
+}
+
+#setupScreen h2 {
+  font-size: 3vw;
+  margin-bottom: 20px;
+}
+
+#setupScreen label {
+  font-size: 1.5vw;
+}
+
+#setupScreen input {
+  width: 120px;
+  font-size: 1.8vw;
+  padding: 8px;
+}
+
+#setupScreen button {
+  font-size: 2vw;
+  padding: 12px 24px;
+}
+
+/* -- */
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #ff2a2a;
+  color: #ff2a2a;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff2a2a;
+  color: #232323;
+}
+
+/* Fullscreen timer */
+#timerScreen {
+  display: none; /* remains hidden initially */
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout for the full display */
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.02em;
+  font-size: 15vw;
+}
+
+/* Individual digit boxes */
+
+.digit {
+  display: inline-flex;
+  width: 0.75em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* separators */
+.separator {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.3em;
+}
